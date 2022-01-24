@@ -7,33 +7,33 @@ import {
     SidebarWrapper,
     SidebarMenu,
     SidebarLink,
-    SidebarBtnWrapper,
+    SidebarBtnWrap,
     SidebarRouter
 } from './sidebarElements';
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggle }) => {
     return (
-        <SidebarContainer>
-            <Icon>
+        <SidebarContainer isOpen={isOpen} onClick={toggle} >
+            <Icon onClick={toggle}>
                 <CloseIcon />
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="about">
+                    <SidebarLink to="about" onClick={toggle}>
                         About
                     </SidebarLink>
-                    <SidebarLink to="discover">
+                    <SidebarLink to="discover" onClick={toggle}>
                         Discover
                     </SidebarLink>
-                    <SidebarLink to="service">
+                    <SidebarLink to="service" onClick={toggle}>
                         Service
                     </SidebarLink>
-                    <SidebarLink to="signup">
+                    <SidebarLink to="signup" onClick={toggle}>
                         Sign up
                     </SidebarLink>
                 </SidebarMenu>
-                <SidebarBtnWrapper>
+                <SidebarBtnWrap>
                     <SidebarRouter to='/signin'>Sign In</SidebarRouter>
-                </SidebarBtnWrapper>
+                </SidebarBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>
     );
