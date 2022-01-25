@@ -35,22 +35,21 @@ export const Icon = styled.div`
 `
 
 export const SidebarWrapper = styled.div`
-    color: #fff;
-    display: grid;
-    align-items: center;
+        display: grid;
+        place-items: center;
     
 `
 
 export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 80px);
+    grid-template-rows: repeat(6, 60px);
     text-align: center;
+    margin-top: 3.5rem;
     
     
-
     @media screen and (max-width: 480px){
-        grid-template-rows: repeat(6, 60px);   
+     grid-template-rows: repeat(6, 60px);   
 
     }
 `
@@ -93,9 +92,9 @@ export const SidebarRouter = styled(LinkR)`
     transition: all 0.2s ease-in-out;
     cursor: pointer
 
-    &:hover{
+    &:hover {
         transition: all 0.2s ease-in-out;
-        background: #fff;
         color: #01bf71;
+        background: #fff;
     }
 `
